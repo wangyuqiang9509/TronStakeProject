@@ -1,0 +1,60 @@
+{
+  "name": "tron-stake-project",
+  "version": "1.0.0",
+  "description": "基于TRON区块链的质押挖矿和资源租赁平台",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\"",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:backend": "cd backend && npm run dev",
+    "build": "npm run build:frontend && npm run build:backend",
+    "build:frontend": "cd frontend && npm run build",
+    "build:backend": "cd backend && npm run build",
+    "test": "npm run test:frontend && npm run test:backend && npm run test:contracts",
+    "test:frontend": "cd frontend && npm test",
+    "test:backend": "cd backend && npm test",
+    "test:contracts": "cd contracts && npm test",
+    "lint": "npm run lint:frontend && npm run lint:backend && npm run lint:contracts",
+    "lint:frontend": "cd frontend && npm run lint",
+    "lint:backend": "cd backend && npm run lint",
+    "lint:contracts": "cd contracts && npm run lint",
+    "install:all": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ../contracts && npm install",
+    "clean": "npm run clean:frontend && npm run clean:backend && npm run clean:contracts",
+    "clean:frontend": "cd frontend && rm -rf node_modules dist build",
+    "clean:backend": "cd backend && rm -rf node_modules dist",
+    "clean:contracts": "cd contracts && rm -rf node_modules artifacts cache"
+  },
+  "keywords": [
+    "tron",
+    "blockchain",
+    "staking",
+    "defi",
+    "resource-rental",
+    "typescript",
+    "react",
+    "nodejs"
+  ],
+  "author": "TronStakeProject Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.21.0",
+    "@typescript-eslint/parser": "^6.21.0",
+    "concurrently": "^8.2.2",
+    "eslint": "^8.55.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prettier": "^5.5.1",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "prettier": "^3.1.0",
+    "typescript": "^5.3.2"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/your-username/tron-stake-project.git"
+  }
+}
